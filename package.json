@@ -2,7 +2,7 @@
   "name": "hangman",
   "description": "Built for the @cantinac JavaScript study group.",
   "version": "0.0.1",
-  "main": "./bin/hangman",
+  "bin": "./bin/hangman",
   "preferGlobal": true,
   "dependencies": {
     "prompt": "0.2.14",
