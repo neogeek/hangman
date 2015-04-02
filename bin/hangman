@@ -21,7 +21,7 @@ function display(message) {
 
     process.stdout.write('\u001B[2J\u001B[0;0f');
 
-    console.log(fs.readFileSync('./static/art/' + game.notfound.length + '.txt', 'utf8'));
+    console.log(fs.readFileSync(__dirname + '/../static/art/' + game.notfound.length + '.txt', 'utf8'));
 
     if (message) {
 
