@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-$ npm install neogeek/hangman
+$ npm install neogeek/hangman -g
 ```
 
 ## Play
