@@ -1,5 +1,9 @@
 {
   "name": "hangman",
+  "description": "Built for the @cantinac JavaScript study group.",
+  "version": "0.0.1",
+  "main": "./bin/hangman",
+  "preferGlobal": true,
   "dependencies": {
     "prompt": "0.2.14",
     "q": "1.2.0"
@@ -9,6 +13,18 @@
   },
   "scripts": {
     "test": "make test"
+  },
+  "authors": [
+    {
+      "name": "Scott Doxey",
+      "email": "hello@scottdoxey.com",
+      "homepage": "http://scottdoxey.com/"
+    }
+  ],
+  "homepage": "https://github.com/neogeek/hangman",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neogeek/hangman.git"
   },
   "private": true
 }
