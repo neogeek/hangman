@@ -51,7 +51,7 @@ describe('hangman', function () {
 
             game.guess('t');
             game.guess('e');
-            game.guess('s').`(function (message) {
+            game.guess('s').fail(function (message) {
 
                 assert.equal(message, 'You win!');
 
