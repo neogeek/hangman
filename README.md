@@ -4,10 +4,16 @@
 
 > Built for the [@cantinac](https://github.com/cantinac) JavaScript study group.
 
+## Install
+
+```bash
+$ npm install neogeek/hangman
+```
+
 ## Play
 
 ```bash
-$ node play.js
+$ hangman
 ```
 
 ## Tests

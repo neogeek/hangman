@@ -1,9 +1,11 @@
+#!/usr/bin/env node
+
 var fs = require('fs');
 var prompt = require('prompt');
 
 prompt.start();
 
-var hangman = require('./src/hangman');
+var hangman = require('../src/hangman');
 
 function start () {
 
