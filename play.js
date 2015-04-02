@@ -1,0 +1,72 @@
+var fs = require('fs');
+var prompt = require('prompt');
+
+prompt.start();
+
+var hangman = require('./src/hangman');
+
+function start () {
+
+    game = hangman();
+
+    display();
+
+    promptForGuess();
+
+}
+
+function display(message) {
+
+    process.stdout.write('\u001B[2J\u001B[0;0f');
+
+    console.log(fs.readFileSync('./static/art/' + game.notfound.length + '.txt', 'utf8'));
+
+    if (message) {
+
+        console.log(message + '\n');
+
+    }
+
+    console.log(game.display() + '\n');
+
+}
+
+function promptForGuess () {
+
+    prompt.get('guess', function (err, results) {
+
+        if (['bye', 'exit'].indexOf(results.guess.toLowerCase()) !== -1) {
+
+            process.exit();
+
+        }
+
+        game.guess(results.guess).then(function (message) {
+
+            display(message);
+
+            promptForGuess();
+
+        }).fail(function (message) {
+
+            display(message);
+
+            console.log('Play again? y/n\n');
+
+            prompt.get('answer', function (err, results) {
+
+                if (['y', 'yes'].indexOf(results.answer.toLowerCase()) !== -1) {
+
+                    start();
+
+                }
+
+            });
+
+        });
+
+    });
+
+}
+
+start();

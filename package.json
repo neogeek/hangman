@@ -1,0 +1,11 @@
+{
+  "name": "hangman",
+  "dependencies": {
+    "prompt": "0.2.14",
+    "q": "1.2.0"
+  },
+  "devDependencies": {
+    "mocha": "2.2.1"
+  },
+  "private": true
+}
