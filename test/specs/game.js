@@ -53,7 +53,7 @@ describe('hangman', function () {
             game.guess('e');
             game.guess('s').fail(function (message) {
 
-                assert.equal(message, 'You win!');
+                assert.notEqual(message.match(/^You win/), false);
 
                 done();
 
@@ -71,7 +71,7 @@ describe('hangman', function () {
             game.guess('g');
             game.guess('h').fail(function (message) {
 
-                assert.equal(message, 'Game over.');
+                assert.notEqual(message.match(/^Game over/), false);
 
                 done();
 
