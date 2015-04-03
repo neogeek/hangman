@@ -48,7 +48,7 @@ module.exports = function (start) {
 
                         if (notfound.length === MAX_FAIL) {
 
-                            deferred.reject('Game over. The word was ' + game.word + '.');
+                            deferred.reject('Game over. The word was ' + this.word + '.');
 
                         } else {
 
